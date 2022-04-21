@@ -17,12 +17,9 @@ type Job = Box<dyn FnOnce() + Send + 'static>;
 
 impl ThreadPool {
     /// 创建线程池。
-    ///
     /// 线程池中线程的数量。
-    ///
-    /// # Panics
-    ///
-    /// `new` 函数在 size 为 0 时会 panic。
+    /// new函数在size为0时会 panic
+    /// mpsc模式.receiver端接收到jobs再分发给workers执行
     pub fn new(size: usize) -> ThreadPool {
         assert!(size > 0);
 
@@ -33,12 +30,14 @@ impl ThreadPool {
         let mut workers = Vec::with_capacity(size);
 
         for id in 0..size {
+            // 克隆receiver及其所有权.这里receiver不会变成多个造成线程重复执行task吗？
             workers.push(Worker::new(id, Arc::clone(&receiver)));
         }
 
         ThreadPool { workers, sender }
     }
 
+    // generics
     pub fn execute<F>(&self, f: F)
     where
         F: FnOnce() + Send + 'static,
@@ -49,6 +48,7 @@ impl ThreadPool {
     }
 }
 
+// 离开作用终止线程
 impl Drop for ThreadPool {
     fn drop(&mut self) {
         println!("Sending terminate message to all workers.");
