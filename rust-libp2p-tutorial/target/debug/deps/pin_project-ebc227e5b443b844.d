@@ -1,0 +1,5 @@
+/Users/looperX/Devlop/rust/rust-libp2p-tutorial/target/debug/deps/pin_project-ebc227e5b443b844.rmeta: /Users/looperX/.cargo/registry/src/github.com-1ecc6299db9ec823/pin-project-0.4.29/src/lib.rs
+
+/Users/looperX/Devlop/rust/rust-libp2p-tutorial/target/debug/deps/pin_project-ebc227e5b443b844.d: /Users/looperX/.cargo/registry/src/github.com-1ecc6299db9ec823/pin-project-0.4.29/src/lib.rs
+
+/Users/looperX/.cargo/registry/src/github.com-1ecc6299db9ec823/pin-project-0.4.29/src/lib.rs:
