@@ -1,2 +1,0 @@
-cargo:rustc-env=TYPENUM_BUILD_CONSTS=/Users/looperX/Devlop/rust/rust-libp2p-tutorial/target/debug/build/typenum-f652251080214f38/out/consts.rs
-cargo:rustc-env=TYPENUM_BUILD_OP=/Users/looperX/Devlop/rust/rust-libp2p-tutorial/target/debug/build/typenum-f652251080214f38/out/op.rs

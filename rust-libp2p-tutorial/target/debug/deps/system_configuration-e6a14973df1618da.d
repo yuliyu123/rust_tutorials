@@ -1,9 +1,0 @@
-/Users/looperX/Devlop/rust/rust-libp2p-tutorial/target/debug/deps/system_configuration-e6a14973df1618da.rmeta: /Users/looperX/.cargo/registry/src/github.com-1ecc6299db9ec823/system-configuration-0.5.0/src/lib.rs /Users/looperX/.cargo/registry/src/github.com-1ecc6299db9ec823/system-configuration-0.5.0/src/dynamic_store.rs /Users/looperX/.cargo/registry/src/github.com-1ecc6299db9ec823/system-configuration-0.5.0/src/network_configuration.rs /Users/looperX/.cargo/registry/src/github.com-1ecc6299db9ec823/system-configuration-0.5.0/src/network_reachability.rs /Users/looperX/.cargo/registry/src/github.com-1ecc6299db9ec823/system-configuration-0.5.0/src/preferences.rs
-
-/Users/looperX/Devlop/rust/rust-libp2p-tutorial/target/debug/deps/system_configuration-e6a14973df1618da.d: /Users/looperX/.cargo/registry/src/github.com-1ecc6299db9ec823/system-configuration-0.5.0/src/lib.rs /Users/looperX/.cargo/registry/src/github.com-1ecc6299db9ec823/system-configuration-0.5.0/src/dynamic_store.rs /Users/looperX/.cargo/registry/src/github.com-1ecc6299db9ec823/system-configuration-0.5.0/src/network_configuration.rs /Users/looperX/.cargo/registry/src/github.com-1ecc6299db9ec823/system-configuration-0.5.0/src/network_reachability.rs /Users/looperX/.cargo/registry/src/github.com-1ecc6299db9ec823/system-configuration-0.5.0/src/preferences.rs
-
-/Users/looperX/.cargo/registry/src/github.com-1ecc6299db9ec823/system-configuration-0.5.0/src/lib.rs:
-/Users/looperX/.cargo/registry/src/github.com-1ecc6299db9ec823/system-configuration-0.5.0/src/dynamic_store.rs:
-/Users/looperX/.cargo/registry/src/github.com-1ecc6299db9ec823/system-configuration-0.5.0/src/network_configuration.rs:
-/Users/looperX/.cargo/registry/src/github.com-1ecc6299db9ec823/system-configuration-0.5.0/src/network_reachability.rs:
-/Users/looperX/.cargo/registry/src/github.com-1ecc6299db9ec823/system-configuration-0.5.0/src/preferences.rs:
