@@ -20,15 +20,15 @@ Some: 有值。
 
 
 Box<dyn(Fn() + Send + 'static)>: 并发用。
+Box -> 来包裹dyn生成的智能指针对象，分配在堆上。
 'static -> 静态生命周期，因为在多线程的时候很可能主线程结束了，多线程仍然在跑，没有'static的话子线程生命周期会随着主线程drop。放在全局只读区，生命周期长。
 Send —> 可以把其ownership安全传递到其他线程中。
 Sync -> 可以在线程中安全共享数据。
 Fn() -> 用&self当做参数。
 dyn -> 编译期不知道大小，需要动态派发.
-Box -> 来包裹dyn生成的智能指针对象，分配在堆上。
 
 maker.rs四个特性：
-Send Sync Sized Cop
+Send Sync Sized Copy
 
 Sized -> 在编译期可确定大小的类型
 Unsized -> 动态大小类型，在编译期无法确定其大小
@@ -39,3 +39,12 @@ clone&copy:
 clone是copy的supertrait,所copy类型也一定是clone类型, 类似于C语言memcpy。
 copy仅只对栈内存做按位复制，而不对任何堆内存负责。所以String::new()、Vec<T>和Box<T>这种分配在堆上的对象无法使用copy，只能用clone进行深拷贝，copy通常用于原生类型及其组合类型（结构体、元组、枚举等）。
 clone可以用户自定义行为，copy不行。
+
+future: 代表一个任务，目前还没有完成，未来会完成。此时线程可以执行其他任务，等待有结果返回时再去执行该任务结果。
+async/await: 联合使用。异步编程，使线程不会处于阻塞中，当有结果时再去执行结果。否则执行其他任务，提高线程利用率。
+async Return a Future instead of blocking the current thread.
+
+C++ future and promise:
+promise: 保存T类型值，该值可被future对象通过get_future()读取。此时两个对象共享相同的共享状态，并且Promise对象是异步provider，它可以在某一时刻设置共享状态的值。Future对象可以返回共享状态的值。
+future可以转移ownership给另一个线程，此时promise可以作为多线程同步的一种机制。
+https://blog.csdn.net/jiange_zh/article/details/51602938

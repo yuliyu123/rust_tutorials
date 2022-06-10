@@ -11,6 +11,7 @@ pub mod traits;
 pub mod concurrency;
 pub mod lifetime;
 pub mod demos;
+pub mod fs;
 
 #[allow(dead_code)]
 fn test_atti() {
