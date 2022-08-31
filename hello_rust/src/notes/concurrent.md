@@ -28,6 +28,7 @@ Fn() -> 用&self当做参数。
 dyn -> 编译期不知道大小，需要动态派发.
 
 maker.rs四个特性：
+
 Send Sync Sized Copy
 
 Sized -> 在编译期可确定大小的类型

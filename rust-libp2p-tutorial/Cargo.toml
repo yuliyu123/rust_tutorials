@@ -10,3 +10,8 @@ libp2p = "0.43.0"
 futures = "0.3.21"
 async-std = { version = "1.10.0", features = ["attributes"] }
 futures-util = { version = "0.3", default-features = false, features = ["alloc"] }
+rocksdb = "0.18.0"
+
+# [dependencies.rocksdb]
+# default-features = false
+# features = ["lz4"]

@@ -1,7 +1,8 @@
-use std::collections::LinkedList;
+use std::time::{Duration, Instant};
 
 fn main() {
-    let list1 = LinkedList::from([1, 2, 3, 4]);
-    let list2: LinkedList<_> = [1, 2, 3, 4].into();
-    assert_eq!(list1, list2);
+    println!("0x0000_0000_0000_0203 & 0x0000_0000_0000_00ff) {:?}", (0x0000_0000_0000_0203 & 0x0000_0000_0000_00ff));
+    println!("0x0000_0000_0000_0303 & 0x0000_0000_0000_00ff) {:?}", (0x0000_0000_0000_0303 & 0x0000_0000_0000_00ff));
 }
+
+// Time elapsed in expensive_function() is: 99.851526583s

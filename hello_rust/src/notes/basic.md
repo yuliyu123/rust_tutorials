@@ -12,15 +12,14 @@
 * match类似于case
 * Result<T, E>可回复错误；不可恢复panic!()
 * 传播错误的简写：? 运算符, 表示出错了直接返回，可在链式调用中使用。和Result联合使用。
-
-		fn read_username_from_file() -> Result<String, io::Error> {
-		    let mut s = String::new();
-
-		    File::open("hello.txt")?.read_to_string(&mut s)?;
-
-		    Ok(s)
-		}
-
+  
+```Rust
+fn read_username_from_file() -> Result<String, io::Error> {
+	let mut s = String::new();
+	File::open("hello.txt")?.read_to_string(&mut s)?;
+	Ok(s)
+}
+```
 * 数据和行为分开，struct和enum不作为对象看待。
 
 
