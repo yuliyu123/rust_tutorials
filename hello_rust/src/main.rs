@@ -1,8 +1,20 @@
-use std::time::{Duration, Instant};
+use chrono::Local;
+use std::thread;
+use tokio::{self, task, runtime::Runtime, time};
+
+fn now() -> String {
+    Local::now().format("%F %T").to_string()
+}
 
 fn main() {
-    println!("0x0000_0000_0000_0203 & 0x0000_0000_0000_00ff) {:?}", (0x0000_0000_0000_0203 & 0x0000_0000_0000_00ff));
-    println!("0x0000_0000_0000_0303 & 0x0000_0000_0000_00ff) {:?}", (0x0000_0000_0000_0303 & 0x0000_0000_0000_00ff));
+    let rt = Runtime::new().unwrap();
+    let _guard = rt.enter();
+    task::spawn(async {
+        time::sleep(time::Duration::from_secs(3)).await;
+        println!("task over: {}", now());
+    });
+
+    thread::sleep(time::Duration::from_secs(4));
 }
 
 // Time elapsed in expensive_function() is: 99.851526583s
